@@ -1,17 +1,17 @@
-calories = []
-with open('calories.txt', 'r') as myFile:  
-    contents = myFile.read()
+elves = []
+totalCalorieCount = 0
+
+with open('calories', 'r') as calories_file:
+    contents = calories_file.read()
     calories = contents.splitlines()
 
-print(calories)
-totalCalorieCount = 0
-largestCalorieCount = 0
 for calorie_individual in calories:
-    if(calorie_individual != ''):
+    if calorie_individual != '':
         totalCalorieCount += int(calorie_individual)
     else:
-        if largestCalorieCount < totalCalorieCount:
-            largestCalorieCount = totalCalorieCount
+        elves.append(int(totalCalorieCount))
         totalCalorieCount = 0
 
-print(largestCalorieCount)
+elves.sort()
+print("Total Calories:")
+print(elves[-1])

@@ -1,7 +1,7 @@
 elves = []
 totalCalorieCount = 0
 
-with open('calories.txt', 'r') as calories_file:
+with open('calories', 'r') as calories_file:
     contents = calories_file.read()
     calories = contents.splitlines()
 
