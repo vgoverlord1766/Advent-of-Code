@@ -1,7 +1,5 @@
 with open('rounds', 'r') as rounds_file:
-    contents = rounds_file.read()
-    rounds = contents.splitlines()
-
+    rounds = rounds_file.read().splitlines()
 total_score = 0
 
 for individual_round in rounds:

@@ -1,9 +1,7 @@
+with open('calories', 'r') as calories_file:
+    calories = calories_file.read().splitlines()
 elves = []
 totalCalorieCount = 0
-
-with open('calories', 'r') as calories_file:
-    contents = calories_file.read()
-    calories = contents.splitlines()
 
 for calorie_individual in calories:
     if calorie_individual != '':
@@ -13,5 +11,4 @@ for calorie_individual in calories:
         totalCalorieCount = 0
 
 elves.sort()
-print("Total Calories:")
 print(elves[-1] + elves[-2] + elves[-3])
