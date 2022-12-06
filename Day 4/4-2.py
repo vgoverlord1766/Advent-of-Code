@@ -1,7 +1,7 @@
 with open('assignments', 'r') as assignments_file:
     assignments = assignments_file.read().splitlines()
-
 assignment_count = 0
+
 for assignment_pair in assignments:
     first_assignment = assignment_pair.split(",")[0]
     second_assignment = assignment_pair.split(",")[1]
