@@ -12,7 +12,6 @@ for instruction in instructions:
 
     boxes_to_move = starting_column[len(starting_column) - number_of_boxes_to_move:]
 
-
     for x in range(number_of_boxes_to_move):
         starting_column.pop()
     ending_column.extend(boxes_to_move)
